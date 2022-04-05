@@ -1,0 +1,11 @@
+You can put ANY children component inside the RNBounceable component, it will make it bounce when it is pressed
+
+<RNBounceable onPress={() => {}}>
+  <View style={styles.bounceButtonStyle}>
+    <Text style={styles.bounceButtonTextStyle}>Bounce</Text>
+  </View>
+</RNBounceable>
+
+
+
+
