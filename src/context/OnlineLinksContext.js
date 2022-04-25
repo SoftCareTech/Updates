@@ -2,6 +2,7 @@ import createDataCntext from './createDataContext'
 import trackerApi from '../api/updates'
 
 
+
 const onlineLinksReducer = (state, action) => {
    switch (action.type) {
       case 'fetch_links':
@@ -58,32 +59,67 @@ export const { Provider, Context } =
 
 
 
+/*columns= [
 
+  { name: "url", type: "string" },
+  { name: "title", type: "string" },
+  { name: "category", type: "string" },
+  { name: "country", type: "string" },
+  { name: "is_observed", type: "boolean" }
+  , { name: "is_pinned", type: "boolean" }
+  , { name: "last_scanned_at", type: "number" }
+  , { name: "status", type: "string" }
+  , { name: "old_data", type: "string" }
+  , { name: "old_data", type: "string" }
+]
+
+columns: [
+                { name: "url_id", type: "string" },
+                { name: "text", type: "string" },
+                { name: "exist", type: "boolean" }
+
+            ]
+            
+            
+            columns: [
+                { name: "url_id", type: "string" },
+                { name: "key", type: "string" },
+                { name: "value", type: "string" }
+                , { name: "type", type: "string" }
+
+            ]
+
+*/
 
 
 const data = [{
    url: "www.j1",
    title: "JAMB Registration",
-   time: "7h"
-   , status: "updated",
+   category: 'job',
+   country: 'Nigeria'
 },
 {
    url: "www.n2",
    title: "NECO Registration",
    time: "7h"
    , status: "updated",
+   category: 'job',
+   country: 'Nigeria'
 },
 {
    url: "www.n62",
    title: "NECO Registration",
    time: "7h"
-   , status: "updated",
+   , status: "updated", category: 'job',
+   country: 'Nigeria'
 },
 {
    url: "www.n2u",
    title: "NECO Registration",
    time: "7h"
    , status: "updated",
+   category: 'job',
+   country: 'Nigeria'
 },
 {
    url: "www.w3",

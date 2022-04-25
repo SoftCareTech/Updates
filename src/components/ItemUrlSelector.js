@@ -17,7 +17,7 @@ const ItemUrl = function App({ title, url, onCheckChange }) {
             <View style={styles.textContainer}>
                 <Text numberOfLines={1} ellipsizeMode='tail' style={styles.title} >{title}</Text>
                 <View style={styles.statusContainer}>
-                    <Text numberOfLines={1} ellipsizeMode='tail' style={styles.url} >{url} </Text>
+                    <Text numberOfLines={3} ellipsizeMode='tail' style={styles.url} >{url} </Text>
                 </View>
             </View>
             <View style={styles.section}>

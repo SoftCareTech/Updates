@@ -4,6 +4,10 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+//import { LinksProvider } from './src/context/LinksProvider';
+
+// REALM
+//import { RealmProvider } from "./src/db/RealmApp";
 
 import HomeScreen from './src/screens/HomeScreen'
 import WelcomeScreen from './src/screens/WelcomeScreen'
@@ -11,10 +15,6 @@ import ShareLinksScreen from './src/screens/ShareLinksScreen'
 import LocalAddLinkScreen from './src/screens/LocalAddLinkScreen';
 import LocalAddLinkConfigScreen from './src/screens/LocalAddLinkConfigScreen';
 import OnlineAddLinksScreen from './src/screens/OnlineAddLinksScreen';
-
-
-
-
 
 
 
@@ -31,7 +31,7 @@ const Stack = createNativeStackNavigator();
 function UpdateStack() {
   //initialRouteName='ShareLinks'
   return (
-    <Stack.Navigator initialRouteName='Welcome' >
+    <Stack.Navigator initialRouteName='Home' >
       <Stack.Screen name="Welcome"
         component={WelcomeScreen} options={{ headerShown: false }} />
       <Stack.Screen name="Home"
@@ -51,7 +51,11 @@ function UpdateStack() {
     </Stack.Navigator>
   );
 }
+
+
+
 const App = () => (
+
   <LocalLinksProvider>
     <OnlineLinksProvider>
       <NavigationContainer>
@@ -59,6 +63,8 @@ const App = () => (
       </NavigationContainer>
     </OnlineLinksProvider>
   </LocalLinksProvider>
+
+
 
 );
 

@@ -30,17 +30,24 @@ const styles = StyleSheet.create({
         color: colorBlack,
         marginBottom: 24, marginTop: 0
     },
-
+    centered: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignSelf: 'center'
+    }
 });
 
 const homeCurve = styles.homeCurve
 const fullScreen = styles.fullScreen
 const title = styles.title
 
+const centered = styles.centered
 export {
     colorPrimary, colorBlack, colorWhite, colorWhiteSmoke,
     colorRed,
     homeCurve,
     fullScreen,
-    title
+    title,
+    centered
 }

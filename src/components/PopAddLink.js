@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { StatusBar } from 'expo-status-bar';
 import { Menu, MenuItem, MenuDivider } from 'react-native-material-menu';
 import { ButtonNegative, ButtonPositive } from "./project_elements";
 import { title, colorPrimary, colorWhite, colorWhiteSmoke } from "./project_styles";
-
+import doa from "../db/databaseR";
 import { Alert, Modal, Dimensions, StyleSheet, Text, Pressable, View } from "react-native";
-
+import { Context as LocalLinksContext } from "../context/LocalLinksContext";
 const PopAddLink = ({ visibility, changeVisibility, navigation }) => {
-    console.log(visibility + "  VV")
+
+    const { initLink } = useContext(LocalLinksContext)
     return (
         <View style={styles.centeredView}>
             <Modal
@@ -19,8 +20,9 @@ const PopAddLink = ({ visibility, changeVisibility, navigation }) => {
                 <View style={styles.centeredView}>
                     <View style={styles.modalView}>
                         <Text style={title}>Add</Text>
-                        <ButtonPositive title={"Local"} onPress={() => {
+                        <ButtonPositive title={"Local"} onPress={async () => {
                             changeVisibility()
+                            await initLink()
                             navigation.navigate("LocalAddLink")
                         }
                         } />

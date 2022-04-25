@@ -18,21 +18,20 @@
     "expo": "~44.0.0",
     "expo-checkbox": "~2.0.0",
     "expo-status-bar": "~1.2.0",
-    "pouchdb-react-native": "^6.4.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
-    "react-native-circle-checkbox": "^0.1.6",
     "react-native-element-dropdown": "^1.8.7",
     "react-native-elements": "^3.4.2",
+    "react-native-local-mongodb": "^4.0.0",
     "react-native-material-menu": "^2.0.0",
     "react-native-paper": "^4.12.0",
-    "react-native-rounded-checkbox": "^0.3.3",
+    "react-native-render-html": "^6.3.4",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
+    "react-native-sqlite-storage": "^6.0.1",
     "react-native-svg": "12.1.1",
-    "react-native-web": "0.17.1",
-    "rn-round-checkbox": "^1.0.0"
+    "react-native-web": "0.17.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

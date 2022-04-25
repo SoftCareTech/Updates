@@ -1,0 +1,13 @@
+updates-glusu
+
+
+[  ur{
+url:primary
+title
+category
+params{ header{}, body:{}}
+config:{ newData, oldData, global=false,  conditions[]}
+observing :true|false
+}
+
+}  ]

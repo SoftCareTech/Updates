@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TextInput, View, FlatList, Dimensions } from 'react-native';
 import {
@@ -9,6 +9,7 @@ import {
 } from "../components/project_styles"
 import AppHeader from "../components/AppHeader";
 import AddConfigForm from "../components/AddConfigForm";
+import { Context as LocalLinksContext } from "../context/LocalLinksContext";
 const LocalAddLinkConfigScreen = function App({ navigation }) {
 
 

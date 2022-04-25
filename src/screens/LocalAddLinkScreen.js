@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TextInput, View, FlatList, Dimensions } from 'react-native';
 import {
@@ -9,10 +9,14 @@ import {
 } from "../components/project_styles"
 import AppHeader from "../components/AppHeader";
 import AddLinkForm from "../components/AddLinkForm";
-
+import { Context as LocalLinksContext } from "../context/LocalLinksContext";
+import { Snackbar } from 'react-native-paper';
 const LocalAddLinkScreen = ({ navigation }) => {
+    const { state } = useContext(LocalLinksContext)
+
     return (
         <View style={fullScreen} >
+            <StatusBar style="auto" />
             <View style={styles.container}>
                 <AppHeader title={"Add link"}
                     onBackPressed={() => navigation.goBack()} />
@@ -20,7 +24,15 @@ const LocalAddLinkScreen = ({ navigation }) => {
                     <AddLinkForm navigation={navigation} />
                 </View>
             </View>
-            <StatusBar style="auto" />
+
+
+            <Snackbar
+                visible={state.error ? true : false}
+            // onDismiss={onDismissSnackBar}
+            //</View>action={{ label: 'Undo', onPress: () => { }, }  }
+            >
+                {state.error}
+            </Snackbar>
         </View>
     );
 }

@@ -13,6 +13,7 @@ const PopAddLinkAdavance = ({ visibility, changeVisibility,
     const [name, setName] = useState(data.name)
     const [value, setValue] = useState(data.value)
     const [type, setType] = useState(data.type)
+
     const options = [
         { label: 'Params', value: 'params' },
         { label: 'body', value: 'body' },

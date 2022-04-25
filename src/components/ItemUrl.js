@@ -6,7 +6,7 @@ import { bg1, bg2, SvgAppIco, SvgDots3Vertical, } from "./project_elements";
 import { colorBlack, colorPrimary, colorRed, colorWhite, colorWhiteSmoke } from "./project_styles";
 
 import Svg, { Path } from 'react-native-svg';
-const ItemUrl = function App({ title, time, status, statusColor = colorBlack }) {
+const ItemUrl = function App({ title, time, status, statusColor = colorBlack, onPressMenu }) {
 
     const [visible, setVisible] = useState(false);
     const hideMenu = () => setVisible(false);
@@ -36,10 +36,10 @@ const ItemUrl = function App({ title, time, status, statusColor = colorBlack }) 
                     </Svg>
                 </TouchableOpacity>}
                 onRequestClose={hideMenu}>
-                <MenuItem onPress={hideMenu}>{edit}</MenuItem>
-                <MenuItem onPress={hideMenu}>{visit}</MenuItem>
-                <MenuItem onPress={hideMenu}>{refresh}</MenuItem>
-                <MenuItem onPress={hideMenu}>{remove}</MenuItem>
+                <MenuItem onPress={() => { onPressMenu(0); hideMenu() }}>{edit}</MenuItem>
+                <MenuItem onPress={() => { onPressMenu(1); hideMenu() }}>{visit}</MenuItem>
+                <MenuItem onPress={() => { onPressMenu(2); hideMenu() }}>{refresh}</MenuItem>
+                <MenuItem onPress={() => { onPressMenu(3); hideMenu() }}>{remove}</MenuItem>
                 <MenuDivider />
             </Menu>
         </View>
